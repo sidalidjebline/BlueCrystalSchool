@@ -1,0 +1,46 @@
+﻿
+<li>
+    <a href="#"><i class="fa fa-sitemap"></i> <span class="nav-label">Etablissement Privé </span><span class="fa arrow"></span></a>
+    <ul class="nav nav-second-level collapse">
+        <li>
+            @*<a href="#">Third Level <span class="fa arrow"></span></a>
+                <ul class="nav nav-third-level">
+                    <li>
+                        <a href="#">Third Level Item</a>
+                    </li>
+                    <li>
+                        <a href="#">Third Level Item</a>
+                    </li>
+                    <li>
+                        <a href="#">Third Level Item</a>
+                    </li>
+                </ul>*@
+
+           
+           @Html.ActionLink("Eleves", "Index", "EPEleves", new { area = "EtablissementPrive" }, null)
+        </li>
+        @*<li>
+            <a href="#">Presences Eleves</a>
+        </li>*@
+
+        <li>
+            @Html.ActionLink("Paiements", "Index", "EPPaiementEleves", new { area = "EtablissementPrive" }, null)
+            
+        </li>
+        <li>
+         
+            
+            
+         @*   @Html.ActionLink("Admin Ensignants", "Index", "EPEnseignants", new {area = "Administration"}, null)*@ 
+        </li>
+
+        @*<li>
+            <a href="#">Pointage Ensignants</a>
+        </li>
+
+
+        <li>
+            <a href="#">Paiement Ensignants</a>
+        </li>*@
+    </ul>
+</li>

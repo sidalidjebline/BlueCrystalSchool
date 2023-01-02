@@ -1,0 +1,127 @@
+﻿@model IEnumerable<BlueCrystalSchool.Areas.EtablissementPrive.Models.EPEleve>
+
+@{
+    ViewBag.Title = "Liste des élèves";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Liste des eleves</h2>
+
+<p>
+    @Html.ActionLink("Ajouter", "Create", null, new {@class = "btn btn-primary"})
+</p>
+<div class="ibox-content">
+
+    <div class="table-responsive">
+        <table class="table table-striped table-bordered table-hover" id="listprof">
+            <thead>
+            <tr>
+           
+
+                <th>
+                    @Html.DisplayNameFor(model => model.Nom)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Prenom)
+                </th>
+                
+                
+                
+                <th>
+                    @Html.DisplayNameFor(model => model.EPClasse.NomClasse)
+                </th>
+
+
+                
+
+                <th>
+                    @Html.DisplayNameFor(model => model.DateInscription)
+                </th>
+
+                <th>
+                    @Html.DisplayNameFor(model => model.Observation)
+                </th>
+
+                <th>Actions</th>
+            </tr>
+            </thead>
+            <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+             
+
+                
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Nom)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Prenom)
+                    </td>
+                    
+                    
+                    <td>
+                        @Html.DisplayFor(modelItem => item.EPClasse.NomClasse)
+                    </td>
+                    
+
+                    
+
+                    <td>
+                        @Html.DisplayFor(modelItem => item.DateInscription)
+                    </td>
+                
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Observation)
+                    </td>
+
+                    <td>
+                        @Html.ActionLink("Paiement", "Create", new {controller="EPPaiementEleves",id = item.Id}) |
+                        @Html.ActionLink("Edit", "Edit", new {id = item.Id}) |
+                        @Html.ActionLink("Details", "Details", new {id = item.Id}) |
+                        @Html.ActionLink("Delete", "Delete", new {id = item.Id})
+                    </td>
+                </tr>
+            }
+            </tbody>
+        </table>
+
+    </div>
+</div>
+
+@section scripts
+{
+    <script>
+
+        $(function() {
+            $("#listprof").dataTable({
+             
+                "language": {
+
+                    "url":"~/Scripts/js/plugins/dataTables/French.json"
+                },
+
+
+                pageLength: 25,
+                responsive: true,
+                dom: '<"html5buttons"B>lTfgitp',
+                buttons: [
+                    { extend: 'excel', title: 'ExampleFile' },
+                    { extend: 'pdf', title: 'ExampleFile' },
+                    {
+                        extend: 'print',
+                        customize: function(win) {
+                            $(win.document.body).addClass('white-bg');
+                            $(win.document.body).css('font-size', '10px');
+
+                            $(win.document.body).find('table')
+                                .addClass('compact')
+                                .css('font-size', 'inherit');
+                        }
+                    }
+                ]
+
+            });
+        });
+    </script>
+}

@@ -1,0 +1,104 @@
+﻿@model BlueCrystalSchool.Areas.CoursSoutiens.Models.CSEleve
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>CSEleve</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.CSNiveauScolaire.Niveau)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CSNiveauScolaire.Niveau)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Gender.StudentGender)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Gender.StudentGender)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ListeEcole.NomEtablissemnt)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ListeEcole.NomEtablissemnt)
+        </dd>
+
+  
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Nom)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Nom)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Prenom)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Prenom)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DateNaissance)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DateNaissance)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CommuneNaissance)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CommuneNaissance)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Reduction)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Reduction)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Observation)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Observation)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Solde)
+        </dt>
+
+        <dd>
+            @Convert.ToDouble(Model.Solde)
+         @*   @Html.DisplayFor(model => model.Solde)*@
+        </dd>
+
+   
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.Id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

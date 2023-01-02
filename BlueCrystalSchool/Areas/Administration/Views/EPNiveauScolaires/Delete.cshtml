@@ -1,0 +1,81 @@
+﻿@model BlueCrystalSchool.Areas.EtablissementPrive.Models.EPNiveauScolaire
+
+@{
+    ViewBag.Title = "Delete";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>EPNiveauScolaire</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Filiere.Abreviation)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Filiere.Abreviation)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Palier.NomPalier)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Palier.NomPalier)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Niveau)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Niveau)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.FraisInscription)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FraisInscription)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TarifPaiementAnnuel)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TarifPaiementAnnuel)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TarifPaiementTroisTranches)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TarifPaiementTroisTranches)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TarifPaiementMensuel)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TarifPaiementMensuel)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            @Html.ActionLink("Back to List", "Index")
+        </div>
+    }
+</div>

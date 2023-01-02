@@ -1,0 +1,37 @@
+﻿@model BlueCrystalSchool.Areas.CoursSoutiens.Models.CSEleve
+
+@{
+    ViewBag.Title = "Affecter Groupe";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Affecter Groupe</h2>
+
+
+
+
+@Html.DropDownListFor(m => m.CSMatieres, new SelectList(Model.CSMatieres,"Id","NomMatiere"),"", new { @class = "form-control" })
+
+
+<ul>
+    @foreach (var item in ViewBag.Groupes)
+    {
+        <li>@item.NomGroupe</li>
+    }
+</ul>
+
+
+
+<ul>
+    
+    @foreach (var item in Model.CSMatieres)
+    {
+        <li>
+            @item.NomMatiere
+        </li>
+    }
+
+
+</ul>
+
+

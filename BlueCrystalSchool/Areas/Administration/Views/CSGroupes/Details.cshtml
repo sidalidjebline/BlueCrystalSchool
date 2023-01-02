@@ -1,0 +1,51 @@
+﻿@model BlueCrystalSchool.Areas.CoursSoutiens.Models.CSGroupe
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>CSGroupe</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.CSEnseignant.Nom)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CSEnseignant.Nom)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CSMatiere.NomMatiere)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CSMatiere.NomMatiere)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CsNiveauScolaire.Niveau)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CsNiveauScolaire.Niveau)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.NomGroupe)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NomGroupe)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.Id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

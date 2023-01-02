@@ -1,0 +1,35 @@
+﻿@model BlueCrystalSchool.Models.Commune
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Commune</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Wilaya.NomWilaya)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Wilaya.NomWilaya)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.NomCommune)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NomCommune)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.Id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

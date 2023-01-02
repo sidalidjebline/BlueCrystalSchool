@@ -1,0 +1,36 @@
+﻿@using Microsoft.AspNet.Identity
+
+@*<ul class="nav navbar-top-links navbar-right">
+    <li>
+        <span class="m-r-sm text-muted welcome-message">Welcome @User.Identity.GetUserName() </span>
+    </li>
+
+
+    <li>
+        <a href="javascript:document.getElementById('logoutForm').submit()>
+            <i class="fa fa-sign-out"></i> Log out
+
+        </a>
+    </li>
+</ul>*@
+
+
+
+@using (Html.BeginForm("LogOff", "Account",new {area=""},FormMethod.Post, new { id = "logoutForm"}))
+{
+@Html.AntiForgeryToken()
+
+<ul class="nav navbar-top-links navbar-right">
+    <li>
+        <span class="m-r-sm text-muted welcome-message">Bienvenue <spane style="color: white">@User.Identity.GetUserName() </spane></span>
+    </li>
+  @*  <li><a href="javascript:document.getElementById('logoutForm').submit()">Logout</a></li>*@
+    
+    <li>
+        <a href="javascript:document.getElementById('logoutForm').submit()">
+            <i class="fa fa-sign-out"></i> Log out
+        </a>
+    </li>
+
+</ul>
+}

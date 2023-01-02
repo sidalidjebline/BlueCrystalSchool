@@ -1,0 +1,57 @@
+﻿
+  
+        
+        
+        
+<li>
+    <a href="#"><i class="fa fa-sitemap"></i> <span class="nav-label">Parametrages </span><span class="fa arrow"></span></a>
+    <ul class="nav nav-second-level collapse">
+        <li>
+            <a href="#">Etablissement Scolaire <span class="fa arrow"></span></a>
+            <ul class="nav nav-third-level">
+                <li>
+                    @Html.ActionLink("Tarifs des Niveaux scolaires", "Index","EPNiveauScolaires",new {area = "Administration"},null)
+                    
+                </li>
+                <li>
+                    @Html.ActionLink("Tarif transport", "Index","EPTarifTransports",new {area = "Administration"},null)
+
+                </li>
+                @*<li>
+                    @Html.ActionLink("Tarifs enseignants", "Index","EPTarifPalierEnseignants",new {area = "Administration"},null)
+
+                </li>*@    
+                
+                <li>
+                    @*@Html.ActionLink("Matieres", "Index","EPMatieres",new {area = "Administration"},null)*@
+
+                </li>
+
+                 <li>
+                    @Html.ActionLink("Annuaire des écoles", "Index","ListeEcoles",new {area = "Administration"},null)
+
+                </li>
+                
+                
+
+            </ul>
+        </li>
+    <li>
+        <a href="#">Cours de Soutien <span class="fa arrow"></span></a>
+        <ul class="nav nav-third-level">
+            <li>
+                @Html.ActionLink("Tarifs Cours Soutien", "Index","CSTarifCoursSoutiens",new {area = "Administration"},null)
+            </li>
+            <li>
+                @Html.ActionLink("Tarifs Cours Particulers", "Index","CSTarifCoursParticuliers",new {area = "Administration"},null)
+            </li>  
+            
+            <li>
+             @*   @Html.ActionLink("Gestion des groupes", "Index","CSGroupes",new {area = "Administration"},null)*@
+            </li>
+         
+        </ul>
+    </li>
+      
+    </ul>
+</li>

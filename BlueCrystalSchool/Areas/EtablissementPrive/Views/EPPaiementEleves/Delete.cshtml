@@ -1,0 +1,81 @@
+﻿@model BlueCrystalSchool.Areas.EtablissementPrive.Models.EPPaiementEleve
+
+@{
+    ViewBag.Title = "Delete";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>EPPaiementEleve</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.AnneeScolaire.Intitule)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.AnneeScolaire.Intitule)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.EPEleve.Matricule)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.EPEleve.Matricule)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Montant)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Montant)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Reste)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Reste)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DateVersement)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DateVersement)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DateProchainPaiement)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DateProchainPaiement)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Observations)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Observations)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            @Html.ActionLink("Back to List", "Index")
+        </div>
+    }
+</div>
